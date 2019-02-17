@@ -30,7 +30,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   }
   
   func setupStations() {
-    stations = [Station(name: "飯田橋", prefecture: "東京都新宿区"), Station(name: "九段下", prefecture: "東京都千代田区"), Station(name: "御茶ノ水", prefecture: "東京都文京区") ];
+    // stations = [Station(name: "飯田橋", prefecture: "東京都新宿区"), Station(name: "九段下", prefecture: "東京都千代田区"), Station(name: "御茶ノ水", prefecture: "東京都文京区") ];
+    let url = URL(string: "http://api.ekispert.jp/v1/json/station?key=[駅すぱあとのKEY]")!
+    Alamofire.request(url, method: .get).responseJSON { response in
+      switch response.result {
+      case .success:
+        let json:JSON = JSON(response.result.value ?? kill)
+        let resData:JSON = json["ResultSet"]["Point"]
+        var stationInfo: [Station] = []
+        resData.forEach { (_, resData) in
+          let station: Station = Station.init(name: resData["Station"]["Name"].string!, prefecture: resData["Prefecture"]["Name"].string!)
+          stationInfo.append(station)
+        }
+        self.stations = stationInfo
+        self.stationList.reloadData()
+        
+      case .failure(let error):
+        print(error)
+      }
+    }
   }
   
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
