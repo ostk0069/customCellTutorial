@@ -14,6 +14,7 @@
 		82CD86EB2219501E003B6CE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82CD86E92219501E003B6CE8 /* LaunchScreen.storyboard */; };
 		82D91645221957E400549E7A /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D91643221957E400549E7A /* StationTableViewCell.swift */; };
 		82D91646221957E400549E7A /* StationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D91644221957E400549E7A /* StationTableViewCell.xib */; };
+		82D916482219663400549E7A /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D916472219663400549E7A /* Station.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		82CD86EC2219501E003B6CE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82D91643221957E400549E7A /* StationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
 		82D91644221957E400549E7A /* StationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationTableViewCell.xib; sourceTree = "<group>"; };
+		82D916472219663400549E7A /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				82CD86EC2219501E003B6CE8 /* Info.plist */,
 				82D91643221957E400549E7A /* StationTableViewCell.swift */,
 				82D91644221957E400549E7A /* StationTableViewCell.xib */,
+				82D916472219663400549E7A /* Station.swift */,
 			);
 			path = CustomCellTutorial;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			files = (
 				82CD86E32219501C003B6CE8 /* ViewController.swift in Sources */,
 				82CD86E12219501C003B6CE8 /* AppDelegate.swift in Sources */,
+				82D916482219663400549E7A /* Station.swift in Sources */,
 				82D91645221957E400549E7A /* StationTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
