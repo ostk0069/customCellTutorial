@@ -15,6 +15,8 @@
 		82D91645221957E400549E7A /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D91643221957E400549E7A /* StationTableViewCell.swift */; };
 		82D91646221957E400549E7A /* StationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D91644221957E400549E7A /* StationTableViewCell.xib */; };
 		82D916482219663400549E7A /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D916472219663400549E7A /* Station.swift */; };
+		82D9164B22197CC600549E7A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D9164A22197CC600549E7A /* Alamofire.framework */; };
+		82D9164D22197CD600549E7A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D9164C22197CD600549E7A /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		82D91643221957E400549E7A /* StationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
 		82D91644221957E400549E7A /* StationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationTableViewCell.xib; sourceTree = "<group>"; };
 		82D916472219663400549E7A /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		82D9164A22197CC600549E7A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		82D9164C22197CD600549E7A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D9164D22197CD600549E7A /* SwiftyJSON.framework in Frameworks */,
+				82D9164B22197CC600549E7A /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +52,7 @@
 			children = (
 				82CD86DF2219501C003B6CE8 /* CustomCellTutorial */,
 				82CD86DE2219501C003B6CE8 /* Products */,
+				82D9164922197CC400549E7A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +80,15 @@
 			path = CustomCellTutorial;
 			sourceTree = "<group>";
 		};
+		82D9164922197CC400549E7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82D9164C22197CD600549E7A /* SwiftyJSON.framework */,
+				82D9164A22197CC600549E7A /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +99,7 @@
 				82CD86D92219501B003B6CE8 /* Sources */,
 				82CD86DA2219501B003B6CE8 /* Frameworks */,
 				82CD86DB2219501B003B6CE8 /* Resources */,
+				82D9164E22197CF300549E7A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -139,6 +156,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		82D9164E22197CF300549E7A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		82CD86D92219501B003B6CE8 /* Sources */ = {
@@ -293,6 +328,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CustomCellTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -310,6 +349,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CustomCellTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
