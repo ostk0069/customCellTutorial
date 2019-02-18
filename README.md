@@ -2,8 +2,8 @@
 
 このレポジトリ の解説はQiitaにて記載しています。
 
-- PART1: 
-- PART2:
+- PART1: https://qiita.com/ostk0069/items/8bd4173ff4f083e35951
+- PART2: https://qiita.com/ostk0069/items/385acd1875c0d3e3277f
 
 ## 使用したAPIについて
 
