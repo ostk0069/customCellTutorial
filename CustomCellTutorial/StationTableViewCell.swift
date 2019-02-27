@@ -18,7 +18,7 @@ class StationTableViewCell: UITableViewCell {
         // Initialization code
     }
   
-  func setCell(station: Station) {
+  func setCell(station: StationSet) {
     self.name.text = station.name as String
     self.prefecture.text = station.prefecture as String
   }
