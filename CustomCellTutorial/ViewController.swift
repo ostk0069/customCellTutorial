@@ -38,9 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = StationTableViewCell.dequeue(from: stationList, for: indexPath)
-        cell.setCell(station: stations[indexPath.row])
-        
+        let cell = StationTableViewCell.dequeue(from: stationList, for: indexPath, with: stations[indexPath.row])
         return cell
     }
 }

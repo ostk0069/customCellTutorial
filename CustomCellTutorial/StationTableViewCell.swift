@@ -19,15 +19,17 @@ class StationTableViewCell: UITableViewCell {
           super.awakeFromNib()
     }
   
-    func setCell(station: Station) {
-      self.name.text = station.name as String
-      self.prefecture.text = station.prefecture as String
-    }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
 }
 
 extension StationTableViewCell: Reusable & NibType {
+  typealias Dependency = Station
+  
+  func inject(_ dependency: Dependency) {
+    let station = dependency
+    name.text = station.name
+    prefecture.text = station.prefecture
+  }
 }
