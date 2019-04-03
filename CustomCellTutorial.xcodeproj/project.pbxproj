@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82A5DEB422547CA800BE809A /* Instantiate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A5DEB322547CA800BE809A /* Instantiate.framework */; };
+		82A5DEB622547E9E00BE809A /* InstantiateStandard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A5DEB522547E9E00BE809A /* InstantiateStandard.framework */; };
 		82CD86E12219501C003B6CE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CD86E02219501C003B6CE8 /* AppDelegate.swift */; };
 		82CD86E32219501C003B6CE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CD86E22219501C003B6CE8 /* ViewController.swift */; };
 		82CD86E62219501C003B6CE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82CD86E42219501C003B6CE8 /* Main.storyboard */; };
@@ -20,9 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82A5DEB322547CA800BE809A /* Instantiate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Instantiate.framework; path = Carthage/Build/iOS/Instantiate.framework; sourceTree = "<group>"; };
+		82A5DEB522547E9E00BE809A /* InstantiateStandard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InstantiateStandard.framework; path = Carthage/Build/iOS/InstantiateStandard.framework; sourceTree = "<group>"; };
 		82CD86DD2219501C003B6CE8 /* CustomCellTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCellTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CD86E02219501C003B6CE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		82CD86E22219501C003B6CE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		82CD86E22219501C003B6CE8 /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
 		82CD86E52219501C003B6CE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82CD86E72219501E003B6CE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82CD86EA2219501E003B6CE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82A5DEB622547E9E00BE809A /* InstantiateStandard.framework in Frameworks */,
+				82A5DEB422547CA800BE809A /* Instantiate.framework in Frameworks */,
 				82D9164D22197CD600549E7A /* SwiftyJSON.framework in Frameworks */,
 				82D9164B22197CC600549E7A /* Alamofire.framework in Frameworks */,
 			);
@@ -83,6 +89,8 @@
 		82D9164922197CC400549E7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82A5DEB522547E9E00BE809A /* InstantiateStandard.framework */,
+				82A5DEB322547CA800BE809A /* Instantiate.framework */,
 				82D9164C22197CD600549E7A /* SwiftyJSON.framework */,
 				82D9164A22197CC600549E7A /* Alamofire.framework */,
 			);
@@ -166,6 +174,8 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Instantiate.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/InstantiateStandard.framework",
 			);
 			outputPaths = (
 			);

@@ -7,26 +7,29 @@
 //
 
 import UIKit
+import Instantiate
+import InstantiateStandard
 
 class StationTableViewCell: UITableViewCell {
 
-  @IBOutlet weak var name: UILabel!
-  @IBOutlet weak var prefecture: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var prefecture: UILabel!
   
-  override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override func awakeFromNib() {
+          super.awakeFromNib()
     }
   
-  func setCell(station: Station) {
-    self.name.text = station.name as String
-    self.prefecture.text = station.prefecture as String
-  }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
+}
+
+extension StationTableViewCell: Reusable & NibType {
+  typealias Dependency = Station
+  
+  func inject(_ dependency: Dependency) {
+    let station = dependency
+    name.text = station.name
+    prefecture.text = station.prefecture
+  }
 }
