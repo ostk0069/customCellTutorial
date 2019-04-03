@@ -1,2 +1,3 @@
 github "Alamofire/Alamofire" "4.8.2"
 github "SwiftyJSON/SwiftyJSON" "4.3.0"
+github "tarunon/Instantiate" "3.0.0"

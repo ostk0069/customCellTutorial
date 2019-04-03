@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Instantiate
+import InstantiateStandard
 
 class StationTableViewCell: UITableViewCell {
 
@@ -25,5 +27,7 @@ class StationTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
+}
+
+extension StationTableViewCell: Reusable & NibType {
 }
